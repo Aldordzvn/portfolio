@@ -1,1 +1,117 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'normalize.css';
+
+@font-face {
+    font-family: 'Rubik';
+    src: url('../public/fonts/Rubik-VariableFont_wght.ttf') format('truetype');
+    font-style: normal;
+}
+
+
+html {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: 'Rubik';
+}
+
+*,
+*:before,
+*::after {
+    box-sizing: inherit;
+}
+
+// COLORES
+$negro: #000;
+$blanco: #fff;
+$titleColor: #740938;
+$textColor: #222831;
+$firstBG: #F2EFE7;
+$secondaryBG: #EEEEEE;
+$subtitle: #31363F;
+
+// ATARDECER
+// $rosaFuerte: #740938;
+$rosaMedio: #AF1740;
+$rosaPastel: #CC2B52;
+$rosaBajito: #DE7C7D;
+
+// MAR
+// $grisCielo: #F2EFE7;
+$azulPastel: #9ACBD0;
+$azulG: #48A6A7;
+$azulVerde: #006A71;
+
+// INVIERNO
+// $grisOscuro: #222831;
+// $gris: #31363F;
+$azulInvierno: #76ABAE;
+// $grisClaro: #EEEEEE;
+
+:root {
+    --secondary: #{$blanco};
+    --default: #{$negro};
+    --bg-color: #{$firstBG};
+    --text-color: #{$textColor};
+    --title-color: #{$titleColor};
+    --secondary-bg: #{$secondaryBG};
+    --subtitle: #{$subtitle};
+}
+
+.darkmode{
+    --secondary: #0C0C0C;
+    --default: #{$blanco};
+    --bg-color: #{$textColor};
+    --text-color: #{$secondaryBG};
+    --title-color: #C7F9FF;
+    --secondary-bg: #{$subtitle};
+    --subtitle: #{$firstBG};
+
+}
+
+.block-scroll{
+    overflow: hidden;
+}
+
+// MIXINS
+@mixin cuatrok{
+    @media(max-width:2560px){
+        @content;
+    }
+}
+
+@mixin portatilL{
+    @media(max-width:1440px){
+        @content;
+    }
+}
+@mixin portatil{
+    @media(max-width:1024px){
+        @content;
+    }
+}
+
+@mixin tablet{
+    @media(max-width:768px){
+        @content;
+    }
+}
+
+@mixin movilL{
+    @media(max-width:425px){
+        @content;
+    }
+}
+
+@mixin movilM{
+    @media(max-width:375px){
+        @content;
+    }
+}
+
+@mixin movilS{
+    @media(max-width:320px){
+        @content;
+    }
+}
