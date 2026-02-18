@@ -1,0 +1,182 @@
+@import '../styles/_mixins/mixins';
+
+header {
+    background-color: var(--primary);
+    border-bottom: 1px solid var(--border);
+}
+
+.header__elements {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.6rem;
+}
+
+.sections {
+    display: none;
+}
+
+.btnThemeDesktop {
+    display: none;
+}
+
+.btnMenuMobile {
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+
+    &:hover {
+        color: var(--headerHover-text);
+    }
+}
+
+a {
+    color: var(--alternative-text);
+
+    &:hover {
+        color: var(--headerHover-text);
+    }
+}
+
+.modal__menu {
+    position: fixed;
+    inset: 0;
+    background-color: var(--primary);
+    visibility: hidden;
+}
+
+.menu__elements {
+    display: flex;
+    flex-direction: column;
+}
+
+.back__container {
+    display: flex;
+    justify-content: space-between;
+
+    border-bottom: 1px solid var(--border);
+    padding: 1.6rem;
+
+    button {
+        background-color: transparent;
+        border: none;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        &:hover {
+            color: var(--headerHover-text);
+        }
+    }
+
+    .icon {
+        font-size: 2rem;
+    }
+}
+
+.links__container-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 3rem;
+    padding: 0 1.6rem 1.6rem;
+}
+
+.fadeInRight {
+    visibility: visible;
+    -webkit-animation-name: fadeInRight;
+    animation-name: fadeInRight;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(100%, 0, 0);
+        transform: translate3d(100%, 0, 0);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(100%, 0, 0);
+        transform: translate3d(100%, 0, 0);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+.fadeOutRight {
+    visibility: visible;
+    -webkit-animation-name: fadeOutRight;
+    animation-name: fadeOutRight;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeOutRight {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: translate3d(100%, 0, 0);
+        transform: translate3d(100%, 0, 0);
+    }
+}
+
+@keyframes fadeOutRight {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: translate3d(100%, 0, 0);
+        transform: translate3d(100%, 0, 0);
+    }
+}
+
+@include desktop{
+    .sections{
+        display: flex;
+        gap: 2rem;
+    }
+
+    .btnThemeDesktop{
+        display: flex;
+        background-color: transparent;
+        border: none;
+        font-size: 2rem;
+        &:hover{
+            color: var(--headerHover-text);
+        }
+    }
+
+    .btnMenuMobile{
+        display: none;
+    }
+}
+
+@include desktopL{
+    .header__elements{
+        padding: 1.6rem 3rem;
+    }
+}

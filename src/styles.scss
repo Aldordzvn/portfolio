@@ -1,1 +1,69 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'normalize.css';
+
+:root {
+    --primary-bg: #f8f7f7;
+    --secondary-bg: #f2eeee;
+
+    --primary: #73413d;
+    --secondary: #F29829;
+    --secondary-hover: #d87d0d;
+
+    --headerHover-text: #FAC27D;
+
+    --alternative-text: #f8f7f7;
+    --text: #311816;
+    --secondary-text: #42211f;
+
+    --border: #e1d7d6;
+
+    --success: #10B981;
+    --error: #EF4444;
+    --warning: #F59E0B;
+}
+
+.atardecer-en-el-mar-1-hex {
+    color: #F29829;
+}
+
+.atardecer-en-el-mar-2-hex {
+    color: #F27B13;
+}
+
+.atardecer-en-el-mar-3-hex {
+    color: #F25D27;
+}
+
+.atardecer-en-el-mar-4-hex {
+    color: #BF5239;
+}
+
+.atardecer-en-el-mar-5-hex {
+    color: #73413D;
+}
+
+html, body{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.6rem;
+    font-family: 'roboto';
+    font-weight: normal;
+    color: var(--text);
+    background-color: var(--primary-bg);
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+a{
+    text-decoration: none;
+}
+
+button{
+    cursor: pointer;
+    color: var(--alternative-text);
+}

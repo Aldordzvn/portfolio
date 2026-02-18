@@ -1,0 +1,27 @@
+<header>
+    <div class="header__elements">
+        <a href="#">Aldo Rodriguez</a>
+        <div class="sections">
+            <a href="#">Experiencia</a>
+            <a href="#">Proyectos</a>
+            <a href="#">Skills</a>
+        </div>
+        <button class="btnThemeDesktop"> <fa-icon class="icon" [icon]="moonIcon"></fa-icon> </button>
+        <button class="btnMenuMobile" (click)="openMenu()"> <fa-icon class="icon" [icon]="menuIcon"></fa-icon> </button>
+    </div>
+
+    <div class="modal__menu" [class.fadeInRight]="menuBoolean"  [class.fadeOutRight]="!menuBoolean && hasInteracted">
+        <div class="menu__elements">
+            <div class="back__container">
+                <button class="btnBack" (click)="openMenu()"> <fa-icon class="icon back" [icon]="backIcon"></fa-icon> Salir </button>
+                <button class="btnThemeMobile"> <fa-icon class="icon theme" [icon]="moonIcon"></fa-icon></button>
+            </div>
+
+            <div class="links__container-menu">
+                <a class="linkMobile" href="#">Experiencia</a>
+                <a class="linkMobile" href="#">Proyectos</a>
+                <a class="linkMobile" href="#">Skills</a>
+            </div>
+        </div>
+    </div>
+</header>
