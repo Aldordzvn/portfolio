@@ -45,6 +45,7 @@
 html, body{
     box-sizing: border-box;
     font-size: 62.5%;
+    height: 100%;
 }
 
 body{
@@ -59,6 +60,12 @@ body{
     box-sizing: inherit;
 }
 
+.app__layout{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 a{
     text-decoration: none;
 }
@@ -66,4 +73,5 @@ a{
 button{
     cursor: pointer;
     color: var(--alternative-text);
+    font-weight: 500;
 }

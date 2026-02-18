@@ -1,0 +1,150 @@
+@import '../styles/_mixins/mixins';
+
+:host {
+    display: flex;
+    flex: 1;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding: 1.6rem;
+}
+
+.landing__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+.landing__container--elements{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.img__border {
+    width: clamp(25rem, 23.571rem + 4.464vw, 27rem);
+    height: clamp(24rem, 22.571rem + 4.464vw, 26rem);
+    background-color: transparent;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid var(--primary);
+}
+
+.img__landing {
+    max-width: clamp(23rem, 21.571rem + 4.464vw, 25rem);
+    border-radius: 50%;
+}
+
+.text__container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    h1,
+    h2 {
+        margin: 0;
+    }
+
+    h1{
+        font-size: 3.6rem;
+    }
+
+    h2{
+        
+        color: var(--secondary-text);
+    }
+}
+
+.socials__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    .btnDownload {
+        background-color: var(--secondary);
+        height: 4.6rem;
+        padding: 0 1rem;
+        border: 1px solid var(--secondary);
+        border-radius: 6px;
+        color: var(--text);
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        &:hover{
+            background-color: var(--primary);
+            color: var(--alternative-text);
+            border-color: var(--primary);
+        }
+    }
+}
+
+.links__container {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+
+    a {
+        font-size: 4rem;
+        color: var(--text);
+
+        &:hover {
+            color: var(--secondary);
+        }
+    }
+}
+
+@include desktop{
+    main{
+        padding: 0 3rem;
+    }
+
+    .landing__container{
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 10rem;
+    }
+
+    .landing__container--elements{
+        justify-self: flex-start;
+        align-items: start;
+    }
+
+    .img__border{
+        width: 40rem;
+        height: 38rem;
+    }
+    .img__landing{
+        max-width: 38rem;
+    }
+
+    .text__container{
+        text-align: left;
+        align-items: start;
+        gap: 0;
+        h1{
+            font-size: 6rem;
+        }
+
+        h2{
+            font-size: 4rem;
+        }
+    }
+
+    .socials__container{
+        justify-content: start;
+    }
+
+    .links__container{
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+}
