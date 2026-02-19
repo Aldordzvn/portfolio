@@ -1,5 +1,10 @@
 # Portfolio
 
+Proyecto personal con la finalidad de mostrar mi perfil profesional.
+El proyecto esta creado en Angular v19, utilizando buenas practicas de maquetado scss con arquitectura Mobile First y escalando con responsive design.
+
+---
+
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.6.
 
 ## Development server
