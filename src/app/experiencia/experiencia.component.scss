@@ -1,0 +1,73 @@
+@import '../styles/_mixins/mixins';
+
+:host {}
+
+.experiencia__container {
+    background-color: var(--secondary-bg);
+}
+
+.experiencia__container--items {
+
+    padding: 6rem 1.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    p,
+    h3 {
+        margin: 0;
+    }
+
+    h3 {
+        font-size: 2.4rem;
+
+    }
+
+    .puesto {
+        font-size: 2rem;
+        font-weight: 500;
+    }
+
+    .empresa {
+        font-size: 1.8rem;
+    }
+
+    li {
+        margin-bottom: 1rem;
+    }
+}
+
+@include desktop {
+    :host {
+        display: block;
+        min-height: 100vh;
+    }
+
+    .experiencia__container {
+        min-height: inherit;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .experiencia__container--items {
+        max-width: 122rem;
+        margin: 0 auto; 
+        h3{
+            font-size: 4rem;
+            margin-bottom: 2rem;
+        }
+
+        .puesto{
+            font-size: 2.5rem;
+        }
+
+        .empresa{
+            font-size: 2.2rem;
+        }
+
+        .periodo{
+            margin-top: 0.5rem;
+        }
+    }
+}

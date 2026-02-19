@@ -1,23 +1,28 @@
 @import '../styles/_mixins/mixins';
 
 :host {
-    display: flex;
-    flex: 1;
+    display: block;
+    min-height: 100vh;
 }
 
-main {
-    flex: 1;
+.landing__container{
     display: flex;
     justify-content: center;
-    padding: 1.6rem;
+    align-items: center;
+    min-height: inherit;
 }
 
-.landing__container {
+.landing__elements {
+    max-width: 76.8rem;
+    margin: 0 auto;
+    padding: 1.6rem;
+
+    min-height: inherit;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1.6rem;
+    gap: 3.2rem;
 }
 
 .landing__container--elements{
@@ -47,7 +52,6 @@ main {
     text-align: center;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
 
     h1,
     h2 {
@@ -91,7 +95,7 @@ main {
     display: flex;
     gap: 2rem;
     justify-content: center;
-
+    margin-top: 0.6rem;
     a {
         font-size: 4rem;
         color: var(--text);
@@ -103,11 +107,9 @@ main {
 }
 
 @include desktop{
-    main{
-        padding: 0 3rem;
-    }
 
-    .landing__container{
+    .landing__elements{
+        max-width: 122rem;
         flex-direction: row;
         justify-content: space-between;
         gap: 10rem;
