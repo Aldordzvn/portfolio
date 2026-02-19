@@ -17,8 +17,22 @@ export class HeaderComponent {
   menuBoolean : boolean = false;
   hasInteracted : boolean = false;
 
+  ngOnInit(){
+    const theme = localStorage.getItem('theme');
+    if(theme === 'dark'){
+      document.documentElement.classList.add('dark');
+    }
+  }
+
   openMenu(){
     this.hasInteracted = true;
     this.menuBoolean = !this.menuBoolean;
+  }
+
+  toggleThem(){
+    const html = document.documentElement;
+    html.classList.toggle('dark');
+    const isDark = html.classList.contains('dark');
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
   }
 }

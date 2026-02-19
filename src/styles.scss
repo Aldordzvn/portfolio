@@ -22,6 +22,27 @@
     --warning: #F59E0B;
 }
 
+html.dark{
+    --primary-bg: #1A1A1A;
+    --secondary-bg: #262626;
+
+    --primary: #73413d;
+    --secondary: #F29829;
+    --secondary-hover: #d87d0d;
+
+    --headerHover-text: #FAC27D;
+
+    --alternative-text: #f8f7f7;
+    --text: #f8f7f7;
+    --secondary-text: #f2eeee;
+
+    --border: #e1d7d6;
+
+    --success: #10B981;
+    --error: #EF4444;
+    --warning: #F59E0B;
+}
+
 .atardecer-en-el-mar-1-hex {
     color: #F29829;
 }
@@ -46,6 +67,10 @@ html, body{
     box-sizing: border-box;
     font-size: 62.5%;
     height: 100%;
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 body{

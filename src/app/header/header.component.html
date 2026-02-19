@@ -1,12 +1,12 @@
 <header>
     <div class="header__elements">
-        <a href="#">Aldo Rodriguez</a>
+        <a href="">Aldo Rodriguez</a>
         <div class="sections">
-            <a href="#">Experiencia</a>
-            <a href="#">Proyectos</a>
-            <a href="#">Skills</a>
+            <a href="#experiencia">Experiencia</a>
+            <a href="#proyectos">Proyectos</a>
+            <a href="#skills">Skills</a>
         </div>
-        <button class="btnThemeDesktop"> <fa-icon class="icon" [icon]="moonIcon"></fa-icon> </button>
+        <button class="btnThemeDesktop" (click)="toggleThem()"> <fa-icon class="icon" [icon]="moonIcon"></fa-icon> </button>
         <button class="btnMenuMobile" (click)="openMenu()"> <fa-icon class="icon" [icon]="menuIcon"></fa-icon> </button>
     </div>
 
